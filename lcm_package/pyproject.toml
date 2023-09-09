@@ -1,8 +1,0 @@
-[build-system]
-name = "lcm"
-requires = ["setuptools"]
-version = "0.0.1"
-build-backend = "setuptools.build_meta"
-dependencies = [
-    'python_version<"3.8"',
-]
