@@ -1,33 +1,26 @@
 
-class Pet:
-    def __init__(self, name):
-        self.name = name
 
-    def pet_name(self):
-        return self.name
-
-    def type(self):
-        return "unknown"
+try:
+  raise Exception("Hello Exception")
+except Exception as err:
+  print(f'Handled Error message="{err}"')
 
 
-class Dog(Pet):
-    def pet_name(self):
-        return self.name + ' (Wow wow)'
-
-    def type(self):
-        return "Dog"
+try:
+  100 / 0
+except Exception as err:
+  print(f'Handling division by 0 message="{err}"')
 
 
-class Cat(Pet):
-    def pet_name(self):
-        return self.name + ' (Mnew mnew)'
+class MyException(Exception):
+  def __init__(self, message, error_code):
+    super().__init__(message)
 
-    def type(self):
-        return "Cat"
+    self.message = message
+    self.error_code = error_code
+    
 
-
-list = [Cat("Picis"), Dog("Reksis"), Pet("Piika")]
-
-
-for index in range(0, len(list)):
-    print(f'Animal name={list[index].pet_name()} type={list[index].type()}')
+try:
+  raise MyException("my message", 123)
+except MyException as err:
+  print(f'My exception message="{err.message}" error_code={err.error_code}')
