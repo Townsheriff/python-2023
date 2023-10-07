@@ -1,19 +1,11 @@
 # Task
 
-•Create a program which can recursively traverse directories and print the file listing in a hierarchical way
-•For any given filename list out all the stats related to the file such as size, creation time, etc..
+•Explore Python Threading module
+•Create a meaningful example demonstrating use of the mentioned module
 
-```
-A
+## Program
 
-----a.txt
-
-----b.txt
-
-----B
-
---------c.out
-```
+We try to find a specific string for md5 hash collision. This is used to create a malware with a specific hash so standards checks would not find it.
 
 # Installation
 
@@ -23,5 +15,3 @@ Requires anaconda found [here](https://www.anaconda.com/download).
 
 - Running code: `docker compose up -V --build`
 - Linting code: `./lint.sh`
-
-# Running
