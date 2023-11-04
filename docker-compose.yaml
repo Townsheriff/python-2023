@@ -1,9 +1,0 @@
-version: "3.9"
-services:
-  python:
-    container_name: python
-    volumes:
-      - .:/python/
-      - /python/.git
-    build:
-      context: .
