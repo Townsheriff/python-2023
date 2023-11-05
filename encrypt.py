@@ -19,7 +19,6 @@ def encrypt(input_file_name, output_file_name, key_file_name):
     curr_key = random.randint(0, mod)
 
     enc_val = (int.from_bytes(curr_byte) + curr_key) % mod
-    print(f"{int.from_bytes(curr_byte)} + {curr_key} => {enc_val}")
 
     otp_key_file.write(curr_key.to_bytes())
     output_file.write(enc_val.to_bytes())
