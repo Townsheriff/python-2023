@@ -13,6 +13,7 @@ def encrypt(input_file_name, output_file_name, key_file_name):
 
     if not curr_byte:
       input_file.close()
+      output_file.close()
       otp_key_file.close()
       break
 

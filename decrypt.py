@@ -1,7 +1,6 @@
 import argparse
 
 def decrypt(input_file_name, output_file_name, key_file_name):
-
   enc_file = open(input_file_name, 'rb')
   key_file = open(key_file_name, 'rb')
   dec_file = open(output_file_name, 'wb')
@@ -14,6 +13,7 @@ def decrypt(input_file_name, output_file_name, key_file_name):
 
     if not enc_byte:
       enc_file.close()
+      dec_file.close()
       key_file.close()
       break
 
